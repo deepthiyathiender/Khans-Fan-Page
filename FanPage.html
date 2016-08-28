@@ -1,0 +1,683 @@
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.4/jquery.fullPage.css"/>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+    <script src="http://d3js.org/topojson.v0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.4/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.4/jquery.fullPage.js"></script>
+
+
+</head>
+<body style="background-color: #000">
+
+
+<header>
+    <ul id="myMenu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Intro</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Survey, Ranking and More</a></li>
+    </ul>
+</header>
+<div id="fullpage">
+    <div class="section" data-anchor="firstPage">
+        <div id="versus">
+            <img src="header/versus.png" style="width: 200px; height: 200px"/>
+        </div>
+        <figure class="cap-bot-shah">
+            <img src="header/srk.jpg" class="header-image-left" id="left-image"/>
+            <figcaption class="shah-rukh-intro" style="text-align: justify">
+                <b> Shah Rukh Khan Might Have Just Revealed The Plot Of His Next Film With Imtiaz Ali! </b>
+                <br/>
+                <p> The actor, who will star in the director's next film opposite Anushka Sharma, dropped a hint early
+                    Saturday morning, that the film might just be a romantic film.
+
+                    SRK took to his Twitter handle in the early hours of the morning to share a post that read: Revealed
+                    Imtiaz Ali story "That u become such an unquestionable part of me, that I can't find the beginning
+                    of ur heart and the end of mine."
+
+                    According to latest reports, Shah Rukh will being shooting for Imtiaz Ali's film first before moving
+                    on to Anand L Rai's flick. The actor allotted dates for Ali's shoot as his script is ready and
+                    waiting to go on floor. Rai's script on the other hand is still being worked on and hence it only
+                    seemed logical to start the film once things were in place.
+                </p>
+                <br/><a class="ReadMoreBut"> Read More</a>
+            </figcaption>
+        </figure>
+        <figure class="cap-bot-aamir">
+            <img src="header/aamir.jpg" class="header-image-right" id="right-image"/>
+            <figcaption class="aamir-intro" style="text-align: justify">
+                <b>Aamir Khan unveils his Dangal's muscular look!</b>
+                <br/>
+                <p> True to form, perfectionist Aamir Khan yet again presents his best 'look' forward for his role in
+                    the upcoming film Dangal. The actor is all set to wow his fans with his fighter avatar for the
+                    biopic on Indian wrestler Mahaveer Phogat, in which he plays the protagonist.
+                    The dedicated actor, who has often surprised audiences with his dramatic transformations, took to
+                    Twitter to unveil his beefed-up look.
+                    In the movie, the actor showcases the different ages of the wrestler and has been undergoing
+                    rigorous workout sessions for the same. He had to previously gain weight - going from 68 kg to 93 kg
+                    in six months - for his role of the ageing wrestler during the first phase of Dangal's shoots.
+                    Following that, the 50-year-old actor had a weight loss target of 25 kg, before he could begin
+                    shooting for the next phase.
+                </p>
+                <br/>
+                <a class="ReadMoreBut"> Read More</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="section" data-anchor="secondPage">
+        <div id="map"></div>
+        <div class="survey-overlay">
+            <h2 style="color:#B3DFEA; padding: 0px"> Take a survey! Who do you think is better?</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img class="survey-images"
+                         src="http://www.bollywoodgalaxy.net/wp-content/uploads/2016/02/dilwale-in-new-zealand-bg.jpg"
+                         style="width:300px; border-radius: 50px">
+                    <img class="survey-images"
+                         src="https://65.media.tumblr.com/tumblr_lp7lxrYR6E1qgqshio1_1312135256_cover.jpg"
+                         style="width:300px; border-radius: 50px"/>
+                    <div class="text">
+                        <h2> Rating an actor based on his performance </h2>
+                        <p>It can be difficult to rate actors, but there are a few things to consider when a movie
+                            critic rates an actor. These can be how well they delivered their lines, how well they
+                            emoted, how well they moved and interacted with the other cast and environment.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="survey-images"
+                         src="http://www.khaskhabar.com/images/picture_image/shah-rukh-khan-hot-eight-pack-abs-5-5505-shah-rukh-khan-hhh.jpg"
+                         style="width:300px; border-radius: 50px"/>
+                    <img class="survey-images"
+                         src="http://st1.bollywoodlife.com/wp-content/uploads/photos/2016/03/684297-500x500.jpg"
+                         style="width:300px; border-radius: 50px">
+                    <div class="text">
+                        <h2> Rating an actor based on his physique </h2>
+                        <p>Big action movies require big
+                            action movie stars, and Bollywood has had no dearth of leading men willing and able to bulk
+                            up to superhuman size to carry out such ass-kicking duties. Which of these two actors
+                            measure up? </p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img class="survey-images" src="http://static.dnaindia.com/sites/default/files/2015/01/27/305036-srk.jpg"
+                         style="width:300px; border-radius: 50px"/>
+                    <img class="survey-images" src="https://in.bookmyfunction.com/blog/wp-content/uploads/2016/06/1934941.jpg"
+                         style="width:300px; border-radius: 50px">
+                    <div class="text">
+
+                        <h2> Rating an actor based on his Off-Screen performance </h2>
+                        <p>  Always factor specific behavior such as off-screen chemistry with co-actors and humility despite being famous into critical analysis of the man's work in a movie. It’s fair game for critics and civilians alike to consider how star uses his star vehicle not only for purposes of earning money but also to be a philanthropist outside of a film.</p>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage',],
+            menu: '#myMenu',
+            navigation: true,
+            css3: true,
+            onLeave: function (index, nextIndex, direction) {
+                if (index == '1' && direction == 'down') {
+                    CallMap();
+                }
+                else if (index == '2' && direction == "up") {
+                    RemoveMap();
+                }
+            },
+            scrollingSpeed: 450
+        });
+    });
+
+    var leftImage = document.getElementById("left-image");
+
+    leftImage.addEventListener("animationend", function () {
+        leftImage.className = "";
+        leftImage.className = "header-image-left-After";
+    }, false);
+
+    var rightImage = document.getElementById("right-image");
+
+    rightImage.addEventListener("animationend", function () {
+        rightImage.className = "";
+        rightImage.className = "header-image-right-After";
+    }, false);
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+
+<script>
+
+    function RemoveMap() {
+        d3.select("svg").remove();
+    }
+
+    function CallMap() {
+        // The SVG container
+        var width = 750,
+                height = 550;
+
+        var projection = d3.geo.mercator()
+                .translate([400, 380])
+                .scale(120);
+
+        var path = d3.geo.path()
+                .projection(projection);
+
+        var svg = d3.select("#map").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g");
+
+
+        queue()
+                .defer(d3.json, "world-50m.json")
+                .await(ready);
+
+        function ready(error, world) {
+
+            var countries = topojson.object(world, world.objects.countries).geometries;
+
+            var country = svg.selectAll(".country").data(countries);
+
+
+            var srkmarks = [{long: -75, lat: 43},
+                {long: -78, lat: 41},
+                {long: -70, lat: 53},
+                {long: 77.8, lat: 32.36},
+                {long: 23.30, lat: -30.53},
+                {long: 86.75, lat: 33.57},
+                {long: 86.77, lat: 34.65},
+                {long: 112.15, lat: 35.95},
+                {long: 82.42, lat: 30.40},
+                {long: 83.32, lat: 33.95},
+                {long: 87.65, lat: 41.90},
+                {long: -76.87, lat: 38.82},
+                {long: -95.82, lat: 44.45},
+                {long: -74.57, lat: 39.45},
+                {long: -73.80, lat: 42.75},
+                {long: -73.98, lat: 40.77},
+                {long: -61.87, lat: -5.71},
+                {long: -54.49, lat: -6.06},
+                {long: 22.50, lat: 43.76},
+                {long: 30.93, lat: 48.15},
+                {long: -69.60, lat: -46.14}
+            ];
+
+            var aamirmarks = [{long: 77.1, lat: 28.7},
+                {long: 78.39, lat: 9.69},
+                {long: 99.4, lat: 39.5},
+                {long: 89.2, lat: 37.9},
+                {long: -119.05, lat: 35.43},
+                {long: -116.68, lat: 34.27},
+                {long: -117.68, lat: 35.68},
+                {long: -118.15, lat: 33.82},
+                {long: -121.50, lat: 38.52},
+                {long: -117.17, lat: 32.57},
+                {long: -121.92, lat: 37.37},
+                {long: 131.48, lat: -27.77},
+                {long: 146.95, lat: -34.38},
+                {long: 118.82, lat: -33.51},
+                {long: 126.56, lat: -28.70},
+                {long: -106.17, lat: 41.69}
+            ];
+
+
+            country
+                    .enter()
+                    .insert("path")
+                    .attr("class", "country")
+                    .attr("d", path);
+
+
+            svg.selectAll("circle")
+                    .data(srkmarks).enter()
+                    .append("image")
+                    .attr('class', 'mark')
+                    .attr('width', 30)
+                    .attr('height', 30)
+                    .attr("xlink:href", 'header/srk_map.png')
+                    .attr('transform', function (d) {
+                        return "translate(" + projection([d.long, d.lat]) + ")" + " scale(5)"
+                    })
+                    .transition()
+                    .duration(1500)
+                    .ease('bounce', function (d) {
+                        return d;
+                    })
+                    .attr("transform", function (d) {
+                        return "translate(" + projection([d.long, d.lat]) + ")" + " scale(1)"
+                    });
+
+
+            svg.selectAll("circle")
+                    .data(aamirmarks).enter()
+                    .append("image")
+                    .attr('class', 'mark')
+                    .attr('width', 35)
+                    .attr('height', 35)
+                    .attr("xlink:href", 'header/aamir_map.png')
+                    .attr('border-radius', 30)
+                    .attr('transform', function (d) {
+                        return "translate(" + projection([d.long, d.lat]) + ")" + " scale(5)"
+                    })
+                    .transition()
+                    .duration(300)
+                    .ease('cubic', function (d) {
+                        return d;
+                    })
+                    .attr("transform", function (d) {
+                        return "translate(" + projection([d.long, d.lat]) + ")" + " scale(1)"
+                    });
+        }
+    }
+</script>
+
+<style>
+
+    .header-image-left {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        z-index: 0;
+        animation-duration: 1s;
+        animation-name: goRight;
+        animation-iteration-count: 1;
+    }
+
+    .header-image-left-After {
+        position: absolute;
+        top: 70px;
+        left: 150px;
+    }
+
+    @keyframes goRight {
+        from {
+            transform: translate(-400px, 0);
+        }
+
+        to {
+            transform: translate(150px, 0);
+        }
+    }
+
+    .header-image-right {
+        position: absolute;
+        top: 70px;
+        left: 600px;
+        z-index: 0;
+        animation-duration: 1s;
+        animation-name: goLeft;
+        animation-iteration-count: 1;
+    }
+
+    .header-image-right-After {
+        position: absolute;
+        top: 70px;
+        left: 750px;
+    }
+
+    @keyframes goLeft {
+        from {
+            transform: translate(700px, 0px);
+        }
+
+        to {
+            transform: translate(150px, 0px);
+        }
+    }
+
+    #versus {
+        height: 40px;
+        width: 40px;
+        position: absolute;;
+        left: 640px;
+        bottom: 400px;
+        z-index: 5;
+        animation: move 0.5s linear 1;
+    }
+
+    @keyframes move {
+        from {
+            z-index: 8;
+            transform: scale(5);
+        }
+        to {
+            z-index: 0;
+            transform: scale(0.5);
+        }
+    }
+
+    #myMenu li {
+        display: inline-block;
+        margin: 10px;
+        color: #b3dfea;
+        background: #fff;
+        background: rgba(113, 196, 216, 0.5);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #myMenu li.active {
+        background: #666;
+        background: rgb(21, 77, 115);
+        color: #000000;
+    }
+
+    #myMenu li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    #myMenu li.active a:hover {
+        color: #ffffff;
+    }
+
+    #myMenu li:hover {
+        background: rgba(198, 163, 205, 0.8);
+    }
+
+    #myMenu li a,
+    #myMenu li.active a {
+        padding: 9px 18px;
+        display: block;
+    }
+
+    #myMenu li.active a {
+        color: #fff;
+    }
+
+    #myMenu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        z-index: 70;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cap-bot-shah {
+        float: left;
+        overflow: hidden;
+    }
+
+    .shah-rukh-intro {
+        position: absolute;
+        background: black;
+        width: 550px;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 10px 100px 100px 60px;
+        opacity: 0;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+    }
+
+    .cap-bot-shah:hover .shah-rukh-intro {
+        opacity: 1;
+    }
+
+    .cap-bot-shah:before {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .cap-bot-shah .shah-rukh-intro {
+        left: 0;
+        bottom: -10%;
+    }
+
+    .cap-bot-shah:hover .shah-rukh-intro {
+        bottom: 0;
+    }
+
+    .cap-bot-aamir {
+        float: left;
+        overflow: hidden;
+    }
+
+    .aamir-intro {
+        position: absolute;
+        background: black;
+        margin-left: 800px;
+        left: 550px;
+        width: 550px;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 10px 100px 100px 60px;
+        opacity: 0;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+    }
+
+    .cap-bot-aamir:hover .aamir-intro {
+        opacity: 1;
+    }
+
+    .cap-bot-aamir:before {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .cap-bot-aamir .aamir-intro {
+        left: 0;
+        bottom: -10%;
+    }
+
+    .cap-bot-aamir:hover .aamir-intro {
+        bottom: 0;
+    }
+
+    .ReadMoreBut {
+        background: rgb(21, 77, 115);
+        color: #ffffff;
+        display: inline-block;
+        margin: 10px;
+        background: rgba(113, 196, 216, 0.5);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+
+    .ReadMoreBut:hover {
+        background: rgba(198, 163, 205, 0.8);
+
+    }
+
+    body {
+        color: #000;
+        background: #000;
+        margin: 2em;
+    }
+
+    #map {
+        border: 1px solid #b3dfea;
+        width: 750px;
+        height: 570px;
+        float: right;
+
+        /*-moz-box-shadow:    inset 0 0 10px #b3dfea;*/
+        /*-webkit-box-shadow: inset 0 0 10px #b3dfea;*/
+        /*box-shadow:         inset 0 0 10px #b3dfea;*/
+        -webkit-box-shadow: 10px 10px 5px 6px #b3dfea; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow: 10px 10px 5px 6px #b3dfea; /* Firefox 3.5 - 3.6 */
+        box-shadow: 10px 10px 5px 6px #b3dfea; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+    }
+
+    .country {
+        fill: #b3dfea;
+        stroke: #b3dfea;
+        stroke-width: 1.4px;
+        stroke-linejoin: round;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        float: left;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: #154d73;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+        opacity: 0.7;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(113, 196, 216, 0.8);
+        color: white;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    .survey-overlay {
+        background-color: #2e2e2e;
+        width: 610px;
+        height: 550px;
+        float: left;
+        padding: 10px;
+        opacity: 0.9;
+        border-radius: 20px;
+    }
+
+    .text {
+        background: black;
+        background: rgba(0, 0, 0, 0.75);
+        color: #B3DFEA;
+        padding: 10px 20px 20px 20px;
+        opacity: 0.8;
+        border-radius: 20px;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+    }
+
+    .survey-images {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .survey-images:hover {
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        transform: scale(1.15);
+        cursor: pointer;
+
+        -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
